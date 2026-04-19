@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学课程 - 交互式课程平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-color);
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+        }
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .header h1 {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        .grade-section {
+            margin-bottom: 2.5rem;
+        }
+        .grade-title {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .course-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .course-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        .course-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        .course-info {
+            flex: 1;
+        }
+        .course-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--primary-color);
+        }
+        .course-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+        .course-meta {
+            margin-top: 0.8rem;
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+        .coming-soon {
+            opacity: 0.6;
+            cursor: default;
+        }
+        .coming-soon:hover {
+            transform: none;
+            border-color: transparent;
+        }
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-left: 0.5rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../">首页</a> / 数学
+            </nav>
+            <h1>📐 数学课程</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="grade-section">
+            <h2 class="grade-title">七年级</h2>
+            <div class="course-grid">
+                <div class="course-card coming-soon">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 class="course-title">七年级上册 <span class="badge">敬请期待</span></h3>
+                        <p class="course-desc">有理数、整式的加减、一元一次方程、几何图形初步</p>
+                        <div class="course-meta">
+                            <span>📝 4个章节</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card coming-soon">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 class="course-title">七年级下册 <span class="badge">敬请期待</span></h3>
+                        <p class="course-desc">相交线与平行线、实数、平面直角坐标系、二元一次方程组</p>
+                        <div class="course-meta">
+                            <span>📝 4个章节</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grade-section">
+            <h2 class="grade-title">八年级</h2>
+            <div class="course-grid">
+                <div class="course-card coming-soon">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 class="course-title">八年级上册 <span class="badge">敬请期待</span></h3>
+                        <p class="course-desc">三角形、全等三角形、轴对称、整式的乘法与因式分解</p>
+                        <div class="course-meta">
+                            <span>📝 4个章节</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card coming-soon">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 class="course-title">八年级下册 <span class="badge">敬请期待</span></h3>
+                        <p class="course-desc">二次根式、勾股定理、平行四边形、一次函数</p>
+                        <div class="course-meta">
+                            <span>📝 4个章节</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grade-section">
+            <h2 class="grade-title">九年级</h2>
+            <div class="course-grid">
+                <div class="course-card coming-soon">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 class="course-title">九年级上册 <span class="badge">敬请期待</span></h3>
+                        <p class="course-desc">一元二次方程、二次函数、旋转、圆</p>
+                        <div class="course-meta">
+                            <span>📝 4个章节</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card coming-soon">
+                    <div class="course-icon">📖</div>
+                    <div class="course-info">
+                        <h3 class="course-title">九年级下册 <span class="badge">敬请期待</span></h3>
+                        <p class="course-desc">反比例函数、相似、锐角三角函数、投影与视图</p>
+                        <div class="course-meta">
+                            <span>📝 4个章节</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 交互式课程平台 · 让学习更有趣</p>
+    </footer>
+</body>
+</html>

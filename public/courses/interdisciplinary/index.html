@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨学科拓展 - 交互式课程平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-color);
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem 0;
+        }
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .header h1 {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        .course-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .course-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        .course-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .course-icon {
+            font-size: 2.5rem;
+        }
+        .course-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .course-subtitle {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        .course-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .course-modules {
+            background: #f8fafc;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+        .module-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .module-item:last-child {
+            border-bottom: none;
+        }
+        .module-item::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .coming-soon {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .coming-soon:hover {
+            transform: none;
+            border-color: transparent;
+        }
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-left: 0.5rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../">首页</a> / 跨学科拓展
+            </nav>
+            <h1>🔗 跨学科拓展</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <h2 class="section-title">探索数学与其他学科的奇妙联系</h2>
+        
+        <div class="course-grid">
+            <a href="music-and-math/" class="course-card">
+                <div class="course-header">
+                    <div class="course-icon">🎵</div>
+                    <div>
+                        <h3 class="course-title">当数学遇见音乐</h3>
+                        <p class="course-subtitle">初中跨学科交互课件</p>
+                    </div>
+                </div>
+                <p class="course-desc">丝竹之声，天籁之音——用数学描述音乐。探索分数、无理数、函数与音乐的奇妙联系。</p>
+                <div class="course-modules">
+                    <div class="module-item">分数的乘法与比例：三分损益法</div>
+                    <div class="module-item">无理数概念引入：十二平均律</div>
+                    <div class="module-item">数形结合与函数判定：坐标作曲家</div>
+                </div>
+            </a>
+
+            <div class="course-card coming-soon">
+                <div class="course-header">
+                    <div class="course-icon">🎨</div>
+                    <div>
+                        <h3 class="course-title">数学与艺术 <span class="badge">敬请期待</span></h3>
+                        <p class="course-subtitle">探索几何之美</p>
+                    </div>
+                </div>
+                <p class="course-desc">从黄金分割到分形艺术，探索数学在艺术创作中的神奇应用。</p>
+                <div class="course-modules">
+                    <div class="module-item">黄金分割与构图</div>
+                    <div class="module-item">对称与图案设计</div>
+                    <div class="module-item">分形艺术入门</div>
+                </div>
+            </div>
+
+            <div class="course-card coming-soon">
+                <div class="course-header">
+                    <div class="course-icon">🔬</div>
+                    <div>
+                        <h3 class="course-title">数学与科学 <span class="badge">敬请期待</span></h3>
+                        <p class="course-subtitle">用数学解释世界</p>
+                    </div>
+                </div>
+                <p class="course-desc">从物理运动到化学反应，用数学模型理解自然现象。</p>
+                <div class="course-modules">
+                    <div class="module-item">运动与函数图像</div>
+                    <div class="module-item">概率与统计应用</div>
+                    <div class="module-item">数学建模入门</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 交互式课程平台 · 让学习更有趣</p>
+    </footer>
+</body>
+</html>

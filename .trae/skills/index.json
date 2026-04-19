@@ -1,0 +1,38 @@
+{
+  "version": "1.1.0",
+  "lastUpdated": "2026-04-18",
+  "description": "交互式初中数学课程平台 - AI 技能索引",
+  "skills": [
+    {
+      "id": "chapter-design",
+      "name": "章节设计",
+      "path": "chapter-design/SKILL.md",
+      "priority": "high",
+      "description": "一站式章节设计技能，从知识点输入到包含互动元素和习题的完整章节设计",
+      "calls": ["knowledge-map"]
+    },
+    {
+      "id": "chapter-validate",
+      "name": "章节验证",
+      "path": "chapter-validate/SKILL.md",
+      "priority": "high",
+      "description": "章节验证和优化技能，检查章节完整性、内容正确性和交互功能"
+    },
+    {
+      "id": "knowledge-map",
+      "name": "知识图谱",
+      "path": "knowledge-map/SKILL.md",
+      "priority": "medium",
+      "description": "知识图谱生成技能，为章节和年级生成可交互的知识树和思维导图"
+    }
+  ],
+  "usageGuide": {
+    "recommendedWorkflow": [
+      "1. 使用 chapter-design 自动生成完整章节（会自动调用 knowledge-map）",
+      "2. 预览生成的内容",
+      "3. 使用 chapter-validate 验证和优化",
+      "4. 测试和发布"
+    ],
+    "quickStart": "只需说\"帮我生成第一章 有理数\"，AI 会自动完成所有工作！"
+  }
+}

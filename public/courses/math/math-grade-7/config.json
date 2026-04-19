@@ -1,0 +1,37 @@
+{
+  "courseId": "math-grade-7",
+  "title": "初一数学课程",
+  "subtitle": "七年级上册数学",
+  "author": "",
+  "version": "1.0.0",
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "title": "第一章 有理数",
+      "description": "正数、负数、有理数的加减乘除",
+      "path": "chapters/chapter1.html",
+      "icon": "📐"
+    },
+    {
+      "id": "chapter-2",
+      "title": "第二章 整式的加减",
+      "description": "单项式、多项式、合并同类项",
+      "path": "chapters/chapter2.html",
+      "icon": "📊"
+    },
+    {
+      "id": "chapter-3",
+      "title": "第三章 一元一次方程",
+      "description": "方程的概念、解方程、实际应用",
+      "path": "chapters/chapter3.html",
+      "icon": "🔢"
+    },
+    {
+      "id": "chapter-4",
+      "title": "第四章 几何图形初步",
+      "description": "点、线、面、角、相交线",
+      "path": "chapters/chapter4.html",
+      "icon": "📏"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background-color: #f8fafc;
+    scroll-behavior: smooth;
+}
+
+.math-font {
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+}
+
+.string-glow {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.8);
+}
+
+.string-red {
+    background-color: #ef4444;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.8);
+}
+
+.string-blue {
+    background-color: #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+.grid-bg {
+    background-size: 60px 50px;
+    background-image:
+        linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+        linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+}
+
+.coord-point {
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 20;
+}
+
+.coord-point:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.6);
+}
+
+.playing-point {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #10b981 !important;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+    z-index: 30;
+}
+
+#scanner-line {
+    transition: left 0.1s linear;
+}
+
+.odometer {
+    font-variant-numeric: tabular-nums;
+}

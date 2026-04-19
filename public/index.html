@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交互式数学课程平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-color: #4f46e5;
+            --primary-hover: #4338ca;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-color);
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .course-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        .course-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .course-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .course-desc {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .course-meta {
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        .coming-soon {
+            opacity: 0.6;
+            cursor: default;
+        }
+        .coming-soon:hover {
+            transform: none;
+            border-color: transparent;
+        }
+        .badge {
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-left: 0.5rem;
+        }
+        .featured {
+            border: 2px solid var(--accent-color);
+            position: relative;
+        }
+        .featured::after {
+            content: '✨ 推荐';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+        }
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>📚 交互式数学课程平台</h1>
+        <p>探索数学的奇妙世界，开启学习之旅</p>
+    </header>
+
+    <main class="main">
+        <h2 class="section-title">跨学科拓展</h2>
+        
+        <div class="course-grid">
+            <a href="courses/interdisciplinary/music-and-math/" class="course-card featured">
+                <div class="course-icon">🎵</div>
+                <h3 class="course-title">当数学遇见音乐</h3>
+                <p class="course-desc">丝竹之声，天籁之音——用数学描述音乐。探索分数、无理数、函数与音乐的奇妙联系，通过交互式演示深入理解数学概念。</p>
+                <div class="course-meta">
+                    <span>🎼 三分损益法</span>
+                    <span>🎹 十二平均律</span>
+                    <span>📊 坐标作曲家</span>
+                </div>
+            </a>
+        </div>
+
+        <h2 class="section-title">数学课程</h2>
+        
+        <div class="course-grid">
+            <div class="course-card coming-soon">
+                <div class="course-icon">📐</div>
+                <h3 class="course-title">初中数学 <span class="badge">敬请期待</span></h3>
+                <p class="course-desc">系统学习初中数学知识，包括有理数、代数、几何、函数等核心内容，配合丰富的交互式练习。</p>
+                <div class="course-meta">
+                    <span>📖 七年级</span>
+                    <span>📖 八年级</span>
+                    <span>📖 九年级</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 交互式数学课程平台 · 让学习更有趣</p>
+    </footer>
+</body>
+</html>

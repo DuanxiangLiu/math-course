@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{章节标题} - 初中数学课程</title>
+    <link rel="stylesheet" href="../shared/css/components.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--bg-color);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .chapter-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .chapter-header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .chapter-header p {
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .chapter-nav a {
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            transition: background 0.2s;
+        }
+        
+        .chapter-nav a:hover {
+            background: var(--primary-dark);
+        }
+        
+        .chapter-nav a.disabled {
+            background: var(--border-color);
+            color: var(--text-light);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="chapter-header">
+            <h1 class="chapter-title">{章节标题}</h1>
+            <p>{章节简介}</p>
+        </header>
+        
+        <main>
+            <section id="section1" class="content-section">
+                <h2 class="section-title">1.1 {小节标题}</h2>
+                
+                <div class="learning-goals">
+                    <h3>🎯 学习目标</h3>
+                    <ul>
+                        <li>知识目标：{知识目标}</li>
+                        <li>技能目标：{技能目标}</li>
+                        <li>应用目标：{应用目标}</li>
+                    </ul>
+                </div>
+                
+                <div class="concept-box">
+                    <h3>📚 概念讲解</h3>
+                    <p><strong>{概念名称}：</strong>{概念解释}</p>
+                </div>
+                
+                <div class="example-box">
+                    <h3>📝 例题解析</h3>
+                    <div class="example">
+                        <p><strong>例1：</strong>{题目描述}</p>
+                        <p><strong>解答：</strong>{解答过程}</p>
+                    </div>
+                </div>
+                
+                <div class="practice-box">
+                    <h3>✏️ 小试牛刀</h3>
+                    <div class="quiz">
+                        <p><strong>问题：</strong>{问题内容}</p>
+                        <button class="quiz-option" data-correct="true">{选项A}</button>
+                        <button class="quiz-option">{选项B}</button>
+                        <button class="quiz-option">{选项C}</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <nav class="chapter-nav">
+            <a href="chapter-prev.html" class="prev">← 上一章</a>
+            <a href="chapter-next.html" class="next">下一章 →</a>
+        </nav>
+    </div>
+    
+    <script src="../shared/js/utils/notifications.js"></script>
+    <script src="../shared/js/utils/progress.js"></script>
+    <script src="../shared/js/components/quiz.js"></script>
+    <script src="../shared/js/init.js"></script>
+</body>
+</html>

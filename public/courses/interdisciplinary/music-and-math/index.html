@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>当数学遇见音乐：初中跨学科交互课件</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-slate-800">
+
+    <header class="fixed top-0 w-full bg-slate-900/90 backdrop-blur text-white p-4 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wider">《当数学遇见音乐》教学实验室</h1>
+            <nav class="flex gap-6 text-sm font-medium">
+                <a href="#intro" class="hover:text-sky-400 transition">课程介绍</a>
+                <a href="#module-1" class="hover:text-sky-400 transition">一、三分损益</a>
+                <a href="#module-2" class="hover:text-sky-400 transition">二、十二平均律</a>
+                <a href="#module-3" class="hover:text-sky-400 transition">三、坐标与函数</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        
+        <section id="intro" class="min-h-[80vh] py-12 flex flex-col items-center bg-gradient-to-br from-purple-50 to-blue-50 border-b border-gray-200">
+            <div class="max-w-5xl w-full px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-slate-800 mb-4">综合与实践：音乐与数学</h2>
+                    <p class="text-xl text-gray-600">丝竹之声，天籁之音——用数学描述音乐</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8">
+                    <div class="mb-6 p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-500">
+                        <p class="text-lg text-gray-700 italic leading-relaxed">
+                            "大弦嘈嘈如急雨，小弦切切如私语。<br>
+                            嘈嘈切切错杂弹，大珠小珠落玉盘。"
+                        </p>
+                        <p class="text-right text-gray-500 mt-2">——白居易《琵琶行》</p>
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        如何用数学描述音乐呢？音乐是声音的艺术。生活中，有些声音十分悦耳，也有些声音非常刺耳。乐器之间的合奏，也存在上述现象。你知道这是为什么吗？
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-sky-50 p-5 rounded-xl">
+                            <h3 class="font-bold text-sky-800 mb-3 text-lg">📚 活动目标</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• 认识音乐与数学的关系</li>
+                                <li>• 了解数学在音乐律制发展中的作用</li>
+                                <li>• 从函数角度分析五线谱</li>
+                                <li>• 分析乐器结构中蕴含的数学知识</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-5 rounded-xl">
+                            <h3 class="font-bold text-green-800 mb-3 text-lg">🎵 活动准备</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• 乐音的四个基本要素：音强、音高、音值、音色</li>
+                                <li>• 音高与声波振动频率的关系</li>
+                                <li>• 弦的振动频率与弦长的关系</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 p-5 rounded-xl border border-yellow-200">
+                        <h3 class="font-bold text-yellow-800 mb-3 text-lg">💡 核心概念</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-yellow-600 math-font">f ∝ 1/L</div>
+                                <p class="text-sm text-gray-600 mt-1">频率与弦长成反比</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-yellow-600 math-font">2:1</div>
+                                <p class="text-sm text-gray-600 mt-1">八度音程频率比</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-yellow-600 math-font">¹²√2</div>
+                                <p class="text-sm text-gray-600 mt-1">十二平均律公比</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="module-1" class="min-h-[100vh] py-12 flex flex-col items-center border-b border-gray-200 bg-white">
+            <div class="max-w-5xl w-full px-6">
+                <div class="mb-8 border-l-4 border-sky-500 pl-4">
+                    <h2 class="text-3xl font-bold">一、分数的乘法与比例：三分损益法</h2>
+                    <p class="text-gray-600 mt-2">点击操作模拟琴弦，观察分数运算如何改变弦长、声波与音高。</p>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 shadow-sm mb-6">
+                    <div class="bg-blue-50 p-5 rounded-xl mb-6 border border-blue-200">
+                        <h3 class="font-bold text-blue-800 mb-3 text-lg">📖 知识点：三分损益法</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-700 mb-2"><strong>三分损一：</strong>将弦长减去三分之一</p>
+                                <div class="text-xl font-bold text-blue-600 math-font bg-white p-3 rounded-lg text-center">
+                                    L' = L × (1 - 1/3) = L × 2/3
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">音高升高纯五度（频率变为原来的 3/2 倍）</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-700 mb-2"><strong>三分益一：</strong>将弦长增加三分之一</p>
+                                <div class="text-xl font-bold text-blue-600 math-font bg-white p-3 rounded-lg text-center">
+                                    L' = L × (1 + 1/3) = L × 4/3
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">音高降低纯四度（频率变为原来的 3/4 倍）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 text-center mb-8">
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <div class="text-slate-500 text-sm">律位</div>
+                            <div id="m1-note" class="text-3xl font-bold text-slate-800 mt-2">宫 (Do)</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <div class="text-slate-500 text-sm">分数计算过程</div>
+                            <div id="m1-formula" class="text-xl font-bold text-slate-700 math-font mt-2 h-8">基准长度: 1</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl shadow-sm">
+                            <div class="text-slate-500 text-sm">弦长比例</div>
+                            <div id="m1-fraction" class="text-3xl font-bold text-sky-600 math-font mt-2">1 / 1</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 relative w-full h-16 flex items-center bg-white rounded-lg border px-4">
+                        <div class="absolute w-[calc(100%-2rem)] h-full flex justify-between px-[1px] opacity-20 pointer-events-none z-0">
+                            <div class="w-px h-full bg-slate-800"></div><div class="w-px h-full bg-slate-800"></div><div class="w-px h-full bg-slate-800"></div><div class="w-px h-full bg-slate-800"></div>
+                        </div>
+                        <div class="relative w-full h-3 bg-slate-200 rounded-full z-10">
+                            <div id="m1-string" class="absolute left-0 top-0 h-full bg-sky-500 rounded-full transition-all duration-700 string-glow" style="width: 100%;"></div>
+                            <div id="m1-diff" class="absolute top-0 h-full rounded-full transition-all duration-700 opacity-0"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 rounded-xl relative h-32 overflow-hidden border-2 border-slate-700 mb-6">
+                        <div class="absolute top-2 left-4 text-slate-400 text-xs">声波频率可视化 (随弦长缩短而变密)</div>
+                        <canvas id="m1-canvas" class="w-full h-full"></canvas>
+                    </div>
+
+                    <div class="flex justify-center gap-6">
+                        <button onclick="m1_reset()" class="px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg font-bold">返回基音</button>
+                        <button onclick="m1_sun()" class="px-8 py-3 bg-red-100 hover:bg-red-200 text-red-700 border border-red-300 rounded-lg font-bold shadow-md flex flex-col items-center">
+                            <span class="text-lg">三分损一</span>
+                            <span class="text-xs font-normal mt-1 math-font">× (1 - 1/3)</span>
+                        </button>
+                        <button onclick="m1_yi()" class="px-8 py-3 bg-blue-100 hover:bg-blue-200 text-blue-700 border border-blue-300 rounded-lg font-bold shadow-md flex flex-col items-center">
+                            <span class="text-lg">三分益一</span>
+                            <span class="text-xs font-normal mt-1 math-font">× (1 + 1/3)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 p-6 rounded-xl border border-amber-200">
+                    <h3 class="font-bold text-amber-800 mb-3 text-lg">🔢 五声音阶生成表</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white rounded-lg overflow-hidden">
+                            <thead class="bg-amber-100">
+                                <tr>
+                                    <th class="p-3 text-left">步骤</th>
+                                    <th class="p-3 text-left">操作</th>
+                                    <th class="p-3 text-center math-font">弦长比例</th>
+                                    <th class="p-3 text-center">律名</th>
+                                    <th class="p-3 text-center">唱名</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="p-3">1</td>
+                                    <td class="p-3">基准</td>
+                                    <td class="p-3 text-center math-font font-bold">1/1</td>
+                                    <td class="p-3 text-center font-bold">宫</td>
+                                    <td class="p-3 text-center">Do</td>
+                                </tr>
+                                <tr class="bg-red-50">
+                                    <td class="p-3">2</td>
+                                    <td class="p-3">三分损一</td>
+                                    <td class="p-3 text-center math-font font-bold">2/3</td>
+                                    <td class="p-3 text-center font-bold">徵</td>
+                                    <td class="p-3 text-center">Sol</td>
+                                </tr>
+                                <tr class="bg-blue-50">
+                                    <td class="p-3">3</td>
+                                    <td class="p-3">三分益一</td>
+                                    <td class="p-3 text-center math-font font-bold">8/9</td>
+                                    <td class="p-3 text-center font-bold">商</td>
+                                    <td class="p-3 text-center">Re</td>
+                                </tr>
+                                <tr class="bg-red-50">
+                                    <td class="p-3">4</td>
+                                    <td class="p-3">三分损一</td>
+                                    <td class="p-3 text-center math-font font-bold">16/27</td>
+                                    <td class="p-3 text-center font-bold">羽</td>
+                                    <td class="p-3 text-center">La</td>
+                                </tr>
+                                <tr class="bg-blue-50">
+                                    <td class="p-3">5</td>
+                                    <td class="p-3">三分益一</td>
+                                    <td class="p-3 text-center math-font font-bold">64/81</td>
+                                    <td class="p-3 text-center font-bold">角</td>
+                                    <td class="p-3 text-center">Mi</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="module-2" class="min-h-[100vh] py-12 flex flex-col items-center bg-slate-900 text-white border-b border-slate-800">
+            <div class="max-w-5xl w-full px-6">
+                <div class="mb-8 border-l-4 border-teal-400 pl-4">
+                    <h2 class="text-3xl font-bold">二、无理数概念引入：十二平均律的"密率"</h2>
+                    <p class="text-slate-400 mt-2">感受算盘计算极限：相邻半音公比为无理数，波形产生均匀而微小的变化。</p>
+                </div>
+
+                <div class="bg-slate-800/80 rounded-2xl p-6 border border-slate-700 mb-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-700/50 p-5 rounded-xl">
+                            <h3 class="font-bold text-teal-300 mb-3 text-lg">📜 历史背景</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-3">
+                                三分损益法的问题：生成的音阶不能回归本律，无法形成完美的八度关系，给转调带来困难。
+                            </p>
+                            <p class="text-slate-300 text-sm leading-relaxed">
+                                <strong>朱载堉（1536—1611）</strong>：明代律学家，创立十二平均律，用自制的81档双排位大算盘算出"密率"，精确到25位有效数字！
+                            </p>
+                        </div>
+                        <div class="bg-slate-700/50 p-5 rounded-xl">
+                            <h3 class="font-bold text-teal-300 mb-3 text-lg">📐 核心公式</h3>
+                            <div class="space-y-3">
+                                <div class="bg-black/30 p-4 rounded-lg">
+                                    <p class="text-slate-400 text-sm mb-1">八度关系：频率翻倍</p>
+                                    <div class="text-2xl font-bold text-yellow-300 math-font text-center">f₂ = 2 × f₁</div>
+                                </div>
+                                <div class="bg-black/30 p-4 rounded-lg">
+                                    <p class="text-slate-400 text-sm mb-1">十二平均律：12个半音均分八度</p>
+                                    <div class="text-2xl font-bold text-yellow-300 math-font text-center">
+                                        公比 r = ¹²√2 ≈ 1.059463
+                                    </div>
+                                </div>
+                                <div class="bg-black/30 p-4 rounded-lg">
+                                    <p class="text-slate-400 text-sm mb-1">第n个半音的频率</p>
+                                    <div class="text-2xl font-bold text-yellow-300 math-font text-center">
+                                        fₙ = f₀ × (¹²√2)ⁿ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-xl relative overflow-hidden border border-slate-700">
+                    <div class="grid grid-cols-2 gap-8 relative z-10">
+                        <div class="flex flex-col justify-center items-center p-6 bg-slate-900/50 rounded-xl border border-slate-700">
+                            <div class="text-slate-400 mb-2">半音阶梯</div>
+                            <div class="text-4xl font-bold text-teal-400 mb-6">当前: <span id="m2-step">0</span> 个半音</div>
+                            
+                            <div class="text-slate-400 mb-2">朱载堉算盘模拟：弦长比例</div>
+                            <div id="m2-decimal" class="text-4xl text-yellow-300 math-font font-bold tracking-wider odometer font-mono bg-black p-4 rounded-lg shadow-inner">
+                                1.000000000
+                            </div>
+                            <div class="text-xs text-slate-500 mt-4">每变一个半音，弦长 × ¹²√2 或 ÷ ¹²√2</div>
+                        </div>
+
+                        <div class="flex flex-col gap-6">
+                            <div class="bg-black/40 rounded-xl relative h-32 overflow-hidden border border-slate-600">
+                                <div class="absolute top-2 left-4 text-slate-500 text-xs">平均律声波 (变化极其微小且均匀)</div>
+                                <canvas id="m2-canvas" class="w-full h-full"></canvas>
+                            </div>
+                            
+                            <div class="flex flex-col gap-4">
+                                <button onclick="m2_stepUp()" class="w-full py-4 bg-teal-600 hover:bg-teal-500 text-white rounded-xl font-bold shadow-lg transition flex justify-center items-center gap-2">
+                                    <span class="text-xl">▲ 升高一个半音</span>
+                                </button>
+                                <button onclick="m2_stepDown()" class="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white rounded-xl font-bold shadow-lg transition flex justify-center items-center gap-2">
+                                    <span class="text-xl">▼ 降低一个半音</span>
+                                </button>
+                                <button onclick="m2_reset()" class="w-full py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-xl font-bold transition">
+                                    重置回基音
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-teal-300 mb-4 text-center text-lg">🎹 钢琴键盘上的12个半音</h3>
+                    <div class="bg-white rounded-xl p-4 mb-4">
+                        <div class="flex justify-center items-end h-32 relative">
+                            <div class="relative mx-0.5">
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">C</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="absolute -left-3 top-0 w-6 h-14 bg-gray-900 rounded-b-lg z-20"></div>
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">D</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="absolute -left-3 top-0 w-6 h-14 bg-gray-900 rounded-b-lg z-20"></div>
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">E</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">F</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="absolute -left-3 top-0 w-6 h-14 bg-gray-900 rounded-b-lg z-20"></div>
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">G</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="absolute -left-3 top-0 w-6 h-14 bg-gray-900 rounded-b-lg z-20"></div>
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">A</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="absolute -left-3 top-0 w-6 h-14 bg-gray-900 rounded-b-lg z-20"></div>
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">B</span>
+                                </div>
+                            </div>
+                            <div class="relative mx-0.5">
+                                <div class="w-10 h-24 bg-white border-2 border-gray-800 rounded-b-lg flex items-end justify-center pb-1 z-10">
+                                    <span class="text-xs text-gray-700 font-bold">C</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div class="bg-slate-700 p-3 rounded-lg text-center">
+                            <div class="font-bold text-white text-lg">白键</div>
+                            <div class="text-xs text-slate-300 mt-1">C D E F G A B</div>
+                        </div>
+                        <div class="bg-slate-600 p-3 rounded-lg text-center">
+                            <div class="font-bold text-white text-lg">黑键</div>
+                            <div class="text-xs text-slate-300 mt-1"># (升号)</div>
+                        </div>
+                        <div class="bg-slate-700 p-3 rounded-lg text-center">
+                            <div class="font-bold text-teal-300">规律</div>
+                            <div class="text-xs text-slate-300 mt-1">每升高一个半音<br>频率 × ¹²√2</div>
+                        </div>
+                        <div class="bg-slate-600 p-3 rounded-lg text-center">
+                            <div class="font-bold text-teal-300">八度</div>
+                            <div class="text-xs text-slate-300 mt-1">升高12个半音<br>频率 × 2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="module-3" class="min-h-[100vh] py-12 flex flex-col items-center bg-[#fef8f5]">
+            <div class="max-w-5xl w-full px-6">
+                <div class="mb-8 border-l-4 border-orange-500 pl-4">
+                    <h2 class="text-3xl font-bold">三、数形结合与函数判定：我是坐标作曲家</h2>
+                    <p class="text-gray-600 mt-2">在直角坐标系中点击网格描点谱曲。注意：你画出的图形，满足"函数"的定义吗？</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-orange-200 mb-6">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+                            <h3 class="font-bold text-orange-800 mb-3 text-lg">📐 函数定义</h3>
+                            <div class="bg-white p-4 rounded-lg mb-3">
+                                <p class="text-gray-700 leading-relaxed">
+                                    在一个变化过程中，有两个变量 <span class="font-bold math-font">x</span> 和 <span class="font-bold math-font">y</span>，
+                                    如果给定一个 <span class="font-bold math-font">x</span> 值，
+                                    相应地就确定<span class="font-bold text-red-600">唯一</span>的一个 <span class="font-bold math-font">y</span> 值，
+                                    那么就称 <span class="font-bold math-font">y</span> 是 <span class="font-bold math-font">x</span> 的函数。
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="flex-1 bg-green-100 p-3 rounded-lg border border-green-300">
+                                    <div class="text-green-700 font-bold text-sm">✓ 是函数</div>
+                                    <div class="text-xs text-gray-600">一个x对应一个y</div>
+                                </div>
+                                <div class="flex-1 bg-red-100 p-3 rounded-lg border border-red-300">
+                                    <div class="text-red-700 font-bold text-sm">✗ 不是函数</div>
+                                    <div class="text-xs text-gray-600">一个x对应多个y</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 p-5 rounded-xl border border-orange-200">
+                            <h3 class="font-bold text-orange-800 mb-3 text-lg">🎵 音乐映射</h3>
+                            <ul class="text-gray-700 space-y-2">
+                                <li class="flex items-center gap-2">
+                                    <span class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm">X</span>
+                                    <div>
+                                        <strong>横轴（自变量）</strong><br>
+                                        <span class="text-sm text-gray-500">时间 / 节拍</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm">Y</span>
+                                    <div>
+                                        <strong>纵轴（因变量）</strong><br>
+                                        <span class="text-sm text-gray-500">音高 / 频率</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg border border-orange-100 p-6">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="w-full md:w-64 flex flex-col gap-4">
+                                <div class="bg-orange-50 p-4 rounded-xl border border-orange-200">
+                                    <h3 class="font-bold text-orange-800 mb-2">操作提示</h3>
+                                    <ul class="text-xs text-orange-700 space-y-1">
+                                        <li>• 点击网格添加音符</li>
+                                        <li>• 点击音符可删除</li>
+                                        <li>• 同一时间只能有一个音高</li>
+                                        <li>• 共20个节拍，可以写更长的旋律！</li>
+                                    </ul>
+                                </div>
+                                
+                                <button id="btn-play" onclick="m3_playGraph()" class="w-full py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl shadow-md transition text-lg relative overflow-hidden group">
+                                    <span class="relative z-10">▶ 播放扫描</span>
+                                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition"></div>
+                                </button>
+                                
+                                <button onclick="m3_clear()" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold rounded-xl transition">
+                                    清空坐标系
+                                </button>
+
+                                <div id="m3-alert" class="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl hidden flex flex-col gap-2 transition-all">
+                                    <div class="text-red-600 font-bold flex items-center gap-1">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                        触发函数冲突陷阱！
+                                    </div>
+                                    <p class="text-xs text-red-700 leading-tight">
+                                        发现同一时间（X轴相同）对应了多个音高（Y轴不同）。<br><br>
+                                        <strong>思考：</strong>这符合"一个自变量只能对应唯一一个因变量"的函数定义吗？
+                                    </p>
+                                    <button onclick="m3_forcePlay()" class="mt-2 text-xs bg-red-100 hover:bg-red-200 text-red-800 py-1 rounded font-bold">无视规则，强制播放和弦</button>
+                                </div>
+                            </div>
+
+                            <div class="flex-grow relative select-none overflow-x-auto">
+                                <div class="min-w-[950px]">
+                                    <div class="absolute left-0 top-0 h-[400px] w-12 flex flex-col justify-between text-xs text-slate-500 font-bold z-10 py-[20px] text-right pr-2 border-r-2 border-slate-800">
+                                        <span>高Do(8)</span><span>Si(7)</span><span>La(6)</span><span>Sol(5)</span><span>Fa(4)</span><span>Mi(3)</span><span>Re(2)</span><span>Do(1)</span>
+                                    </div>
+                                    
+                                    <div class="absolute left-[48px] bottom-0 w-[900px] h-8 flex justify-between text-xs text-slate-500 font-bold z-10 px-[22.5px] border-t-2 border-slate-800 mt-2 pt-2">
+                                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                                    </div>
+
+                                    <div class="absolute left-[48px] top-[25px] w-[900px] h-[350px] bg-white grid-bg cursor-crosshair relative" id="m3-grid" onclick="m3_handleClick(event)">
+                                        <canvas id="m3-lines" width="900" height="350" class="absolute inset-0 pointer-events-none z-0"></canvas>
+                                        <div id="scanner-line" class="absolute top-0 bottom-0 w-1 bg-red-500 z-10 shadow-[0_0_10px_rgba(239,68,68,0.8)] hidden" style="left: 0px;"></div>
+                                        <div id="m3-points" class="absolute inset-0 z-20"></div>
+                                    </div>
+                                    
+                                    <div class="absolute -left-2 top-[180px] -rotate-90 text-sm font-bold text-slate-800 tracking-widest">Y 轴 : 音 高</div>
+                                    <div class="absolute left-[450px] -bottom-8 text-sm font-bold text-slate-800 tracking-widest">X 轴 : 时 间 / 节 拍</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-amber-50 p-6 rounded-xl border border-amber-200">
+                    <h3 class="font-bold text-amber-800 mb-4 text-lg">📝 示例旋律：《琵琶行》意境五声音阶（尝试在坐标系中画出！）</h3>
+                    <p class="text-sm text-amber-700 mb-4">
+                        结合中国传统五声音阶（宫、商、角、徵、羽），感受《琵琶行》中"大珠小珠落玉盘"的意境，传承中华优秀传统文化！
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white rounded-lg overflow-hidden text-sm">
+                            <thead class="bg-amber-100">
+                                <tr>
+                                    <th class="p-2 text-center">节拍</th>
+                                    <th class="p-2 text-center">1</th>
+                                    <th class="p-2 text-center">2</th>
+                                    <th class="p-2 text-center">3</th>
+                                    <th class="p-2 text-center">4</th>
+                                    <th class="p-2 text-center">5</th>
+                                    <th class="p-2 text-center">6</th>
+                                    <th class="p-2 text-center">7</th>
+                                    <th class="p-2 text-center">8</th>
+                                    <th class="p-2 text-center">9</th>
+                                    <th class="p-2 text-center">10</th>
+                                    <th class="p-2 text-center">11</th>
+                                    <th class="p-2 text-center">12</th>
+                                    <th class="p-2 text-center">13</th>
+                                    <th class="p-2 text-center">14</th>
+                                    <th class="p-2 text-center">15</th>
+                                    <th class="p-2 text-center">16</th>
+                                    <th class="p-2 text-center">17</th>
+                                    <th class="p-2 text-center">18</th>
+                                    <th class="p-2 text-center">19</th>
+                                    <th class="p-2 text-center">20</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr class="bg-amber-50">
+                                    <td class="p-2 text-center font-bold text-amber-700">律名</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">宫</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">商</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">角</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">徵</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">羽</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">徵</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">角</td>
+                                    <td class="p-2 text-center"></td>
+                                    <td class="p-2 text-center font-bold text-amber-600">商</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">宫</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">商</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">角</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">徵</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">羽</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">高宫</td>
+                                    <td class="p-2 text-center"></td>
+                                    <td class="p-2 text-center font-bold text-amber-600">羽</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">徵</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">角</td>
+                                    <td class="p-2 text-center font-bold text-amber-600">宫</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 text-center font-bold">音高</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">1</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">2</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">3</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">5</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">6</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">5</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">3</td>
+                                    <td class="p-2 text-center"></td>
+                                    <td class="p-2 text-center font-bold text-blue-600">2</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">1</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">2</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">3</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">5</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">6</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">8</td>
+                                    <td class="p-2 text-center"></td>
+                                    <td class="p-2 text-center font-bold text-blue-600">6</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">5</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">3</td>
+                                    <td class="p-2 text-center font-bold text-blue-600">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="text-center text-sm">
+                            <p class="text-gray-600">
+                                <span class="font-bold">1=宫(Do), 2=商(Re), 3=角(Mi), 5=徵(Sol), 6=羽(La), 8=高宫</span>
+                            </p>
+                        </div>
+                        <div class="text-center text-sm flex items-center justify-center gap-4">
+                            <p class="text-green-600 font-bold">✓ 这是函数！每个时间只有一个音高</p>
+                            <button id="btn-load-melody" onclick="toggleMelody()" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg shadow-md transition text-sm">
+                                🎵 加载示例旋律
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/audio.js"></script>
+    <script src="js/module1.js"></script>
+    <script src="js/module2.js"></script>
+    <script src="js/module3.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

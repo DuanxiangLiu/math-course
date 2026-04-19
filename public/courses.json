@@ -1,0 +1,24 @@
+{
+  "courses": [
+    {
+      "id": "math-grade-7",
+      "title": "初一数学课程",
+      "subtitle": "七年级上册数学",
+      "description": "本课程基于国家课程标准开发，将初一数学核心内容转化为交互式网页课程，让学习更加生动有趣。",
+      "icon": "📐",
+      "color": "blue",
+      "path": "courses/math/math-grade-7/index.html",
+      "type": "textbook"
+    },
+    {
+      "id": "music-and-math",
+      "title": "当数学遇见音乐",
+      "subtitle": "初中跨学科交互课件",
+      "description": "丝竹之声，天籁之音——用数学描述音乐，探索音乐与数学的关系。",
+      "icon": "🎵",
+      "color": "purple",
+      "path": "courses/interdisciplinary/music-and-math/index.html",
+      "type": "interdisciplinary"
+    }
+  ]
+}

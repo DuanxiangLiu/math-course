@@ -1,0 +1,302 @@
+.chapter-main {
+    padding: 2rem 0;
+}
+
+.chapter-breadcrumb {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.chapter-breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.chapter-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.chapter-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.chapter-sidebar-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+}
+
+.chapter-sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.sidebar-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.chapter-nav {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.chapter-nav-item {
+    margin-bottom: 0.5rem;
+}
+
+.chapter-nav-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.2s;
+}
+
+.chapter-nav-item a:hover,
+.chapter-nav-item.active a {
+    background-color: var(--bg-alt);
+    color: var(--primary-color);
+}
+
+.chapter-nav-item.active a {
+    border-left: 3px solid var(--primary-color);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.chapter-content {
+    min-height: 600px;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+.content-section .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.concept-box,
+.example-box,
+.interactive-demo,
+.practice-box {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.concept-box h3,
+.example-box h3,
+.interactive-demo h3,
+.practice-box h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.concept-box p,
+.example-box p {
+    margin-bottom: 0.75rem;
+    line-height: 1.8;
+}
+
+.math-formula {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.example {
+    background: var(--bg-alt);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.demo-container {
+    text-align: center;
+}
+
+#number-slider {
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+.number-line {
+    position: relative;
+    height: 60px;
+    background: linear-gradient(to right, #ef4444 0%, #fbbf24 50%, #22c55e 100%);
+    border-radius: 30px;
+    margin: 1rem 0;
+}
+
+.number-marker {
+    position: absolute;
+    top: -30px;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    transition: left 0.1s;
+}
+
+#slider-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.quiz p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+    background: var(--bg-alt);
+}
+
+.quiz-option.correct {
+    border-color: #22c55e;
+    background: #dcfce7;
+}
+
+.quiz-option.wrong {
+    border-color: #ef4444;
+    background: #fee2e2;
+}
+
+.chapter-navigation {
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.sidebar-toggle-btn {
+    display: none;
+    width: 100%;
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.2s;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-toggle-btn:hover {
+    background: var(--bg-alt);
+}
+
+.sidebar-toggle-icon {
+    transition: transform 0.3s;
+}
+
+.sidebar-toggle-icon.open {
+    transform: rotate(180deg);
+}
+
+.sidebar-mobile-wrapper {
+    display: none;
+}
+
+@media (max-width: 968px) {
+    .chapter-sidebar-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .chapter-sidebar {
+        position: static;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .chapter-sidebar.open {
+        max-height: 800px;
+        opacity: 1;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .sidebar-toggle-btn {
+        display: flex;
+    }
+}
+
+@media (max-width: 640px) {
+    .chapter-title {
+        font-size: 1.75rem;
+    }
+    
+    .chapter-main {
+        padding: 1rem 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .concept-box,
+    .example-box,
+    .interactive-demo,
+    .practice-box {
+        padding: 1rem;
+    }
+    
+    .math-formula {
+        font-size: 1rem;
+        overflow-x: auto;
+    }
+}

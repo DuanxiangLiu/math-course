@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{章节标题} - 初一数学课程</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/chapter.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">初一数学课程</a>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">返回首页</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main chapter-main">
+        <div class="container">
+            <nav class="chapter-breadcrumb">
+                <a href="../index.html">首页</a> &gt; <span>{章节标题}</span>
+            </nav>
+
+            <h1 class="chapter-title">{章节标题}</h1>
+            
+            <div class="chapter-sidebar-layout">
+                <aside class="chapter-sidebar">
+                    <h3 class="sidebar-title">本章目录</h3>
+                    <ul class="chapter-nav">
+                        <li class="chapter-nav-item active">
+                            <a href="#section1">{小节1标题}</a>
+                        </li>
+                    </ul>
+                    
+                    <button class="btn btn-primary btn-full" onclick="markChapterComplete({章节编号})">
+                        标记本章完成
+                    </button>
+                </aside>
+
+                <div class="chapter-content">
+                    <section id="section1" class="content-section">
+                        <h2 class="section-title">{小节1标题}</h2>
+                        
+                        <div class="learning-goals">
+                            <h3>🎯 学习目标</h3>
+                            <ul>
+                                <li>知识目标：{具体的知识目标}</li>
+                                <li>技能目标：{具体的技能目标}</li>
+                                <li>应用目标：{具体的应用目标}</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="concept-box">
+                            <h3>📚 概念讲解</h3>
+                            <p>详细的概念解释...</p>
+                        </div>
+                        
+                        <div class="example-box">
+                            <h3>📝 例题解析</h3>
+                            <div class="example">
+                                <p><strong>例{N}：</strong>题目描述</p>
+                                <p class="math-formula">数学公式</p>
+                                <p><strong>解答：</strong></p>
+                                <p>详细解答步骤...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-demo">
+                            <h3>🎮 互动演示</h3>
+                            <div class="demo-container">
+                                <p>演示说明文字</p>
+                            </div>
+                        </div>
+                        
+                        <div class="practice-box">
+                            <h3>✏️ 小试牛刀</h3>
+                            <div class="quiz">
+                                <p><strong>问题：</strong>题目内容</p>
+                                <button class="quiz-option" data-correct="true">正确答案</button>
+                                <button class="quiz-option">错误选项</button>
+                                <button class="quiz-option">错误选项</button>
+                            </div>
+                            <div class="explanation" style="display: none;">
+                                <h4>💡 详细解析</h4>
+                                <div class="explanation-content">
+                                    <p>解析内容...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="chapter-navigation">
+                        <a href="chapter{N-1}.html" class="btn btn-secondary">← 上一章</a>
+                        <a href="chapter{N+1}.html" class="btn btn-secondary">下一章 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 初一数学课程. 一起学习，共同进步！</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/chapter.js"></script>
+</body>
+</html>
